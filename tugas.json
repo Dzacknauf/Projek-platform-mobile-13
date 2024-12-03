@@ -1,0 +1,15 @@
+[
+    {
+      "id": 1,
+      "mata_kuliah": "Pemrograman Python",
+      "deskripsi": "Tugas Python week 5",
+      "deadline": "2024-12-05"
+    },
+    {
+      "id": 2,
+      "mata_kuliah": "Matematika",
+      "deskripsi": "Tugas Matematika week 3",
+      "deadline": "2024-12-07"
+    }
+ ]
+  
