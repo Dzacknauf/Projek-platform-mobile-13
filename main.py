@@ -48,9 +48,10 @@ class MyApp(App):
         # Menampilkan jadwal kuliah dari data JSON
         for j in jadwal:
             jadwal_label = Label(
-                text=f"{j['mata_kuliah']} | {j['waktu']} | {j['ruangan']}",
-                size_hint_y=None, height=40)
+            text=f"{j['mata_kuliah']} ({j['dosen']}) | {j['waktu']} | {j['ruangan']}",
+            size_hint_y=None, height=40)
             scroll_layout.add_widget(jadwal_label)
+
 
         # Memuat data tugas dari file JSON
         tugas = load_tugas()
@@ -81,6 +82,7 @@ class MyApp(App):
 
         # Input fields untuk mata kuliah, waktu, ruangan, deskripsi, deadline
         mata_kuliah_input = TextInput(hint_text="Mata Kuliah", size_hint_y=None, height=40)
+        dosen_input = TextInput(hint_text="Nama Dosen", size_hint_y=None, height=40)
         waktu_input = TextInput(hint_text="Waktu", size_hint_y=None, height=40)
         ruangan_input = TextInput(hint_text="Ruangan", size_hint_y=None, height=40)
         deskripsi_input = TextInput(hint_text="Deskripsi Tugas", size_hint_y=None, height=40)
@@ -91,6 +93,7 @@ class MyApp(App):
 
         # Menambahkan input dan tombol ke layout popup
         popup_layout.add_widget(mata_kuliah_input)
+        popup_layout.add_widget(dosen_input)
         popup_layout.add_widget(waktu_input)
         popup_layout.add_widget(ruangan_input)
         popup_layout.add_widget(deskripsi_input)
@@ -98,7 +101,7 @@ class MyApp(App):
         popup_layout.add_widget(save_button)
 
         # Membuat dan menampilkan popup
-        popup = Popup(title="Tambah Jadwal atau Tugas", content=popup_layout, size_hint=(0.8, 0.6))
+        popup = Popup(title="Tambah Jadwal atau Tugas", content=popup_layout, size_hint=(0.8, 0.7))
         popup.open()
 
     def save_data(self, mata_kuliah, waktu, ruangan, deskripsi, deadline):
@@ -107,6 +110,7 @@ class MyApp(App):
             new_jadwal = {
                 "id": len(load_jadwal()) + 1,  # Membuat ID baru berdasarkan jumlah jadwal
                 "mata_kuliah": mata_kuliah,
+                "dosen": dosen,
                 "waktu": waktu,
                 "ruangan": ruangan
             }
