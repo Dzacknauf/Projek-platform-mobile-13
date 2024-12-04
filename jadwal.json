@@ -1,20 +1,16 @@
 [
     {
         "id": 1,
-        "mata_kuliah": "Pemrograman Python",
-        "waktu": "2024-12-03 08:00",
-        "ruangan": "A101"
+        "mata_kuliah": "Pemrograman Dasar",
+        "waktu": "Senin, 08:00-10:00",
+        "ruangan": "A101",
+        "dosen": "Dr. Ahmad"
     },
     {
         "id": 2,
-        "mata_kuliah": "Matematika",
-        "waktu": "2024-12-03 10:00",
-        "ruangan": "B102"
-    },
-    {
-        "id": 3,
-        "mata_kuliah": "Matematika",
-        "waktu": "06.45-08.30",
-        "ruangan": "S31"
+        "mata_kuliah": "Matematika Diskrit",
+        "waktu": "Rabu, 10:00-12:00",
+        "ruangan": "B202",
+        "dosen": "Prof. Budi"
     }
 ]
