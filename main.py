@@ -6,7 +6,7 @@ from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.scrollview import ScrollView
 from kivy.uix.textinput import TextInput
 from kivy.uix.popup import Popup
-
+# yayaya
 # Fungsi untuk memuat data dari file JSON
 def load_jadwal():
     with open('jadwal.json', 'r') as file:
